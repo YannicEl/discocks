@@ -1,0 +1,47 @@
+{
+	"name": "discocks",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"engines": {
+		"node": "20",
+		"pnpm": "9"
+	},
+	"scripts": {
+		"dev": "vite dev --port 3000",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check .",
+		"format": "prettier --write .",
+		"cf-typegen": "wrangler types --env preview && move worker-configuration.d.ts src/",
+		"db:studio": "drizzle-kit studio",
+		"db:push": "drizzle-kit push"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-cloudflare": "4.6.1",
+		"@sveltejs/kit": "2.5.18",
+		"@sveltejs/vite-plugin-svelte": "3.1.1",
+		"@types/node": "20.14.11",
+		"dotenv": "16.4.5",
+		"drizzle-kit": "0.23.0",
+		"prettier": "3.1.1",
+		"prettier-plugin-organize-imports": "4.0.0",
+		"prettier-plugin-svelte": "3.2.6",
+		"prettier-plugin-tailwindcss": "0.6.5",
+		"svelte": "5.0.0-next.1",
+		"svelte-check": "3.6.0",
+		"tslib": "2.4.1",
+		"typescript": "5.5.4",
+		"unocss": "0.61.5",
+		"vite": "5.0.3",
+		"wrangler": "3.66.0"
+	},
+	"dependencies": {
+		"@unocss/reset": "0.61.5",
+		"@yannicel/typed-api": "0.2.7",
+		"drizzle-orm": "0.32.1",
+		"zod": "3.23.8"
+	}
+}
