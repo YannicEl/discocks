@@ -17,13 +17,16 @@
 		"format": "prettier --write .",
 		"cf-typegen": "wrangler types --env preview && move worker-configuration.d.ts src/",
 		"db:studio": "drizzle-kit studio",
-		"db:push": "drizzle-kit push"
+		"db:migrate:local": "drizzle-kit generate && drizzle-kit migrate",
+		"db:migrate:dev": "drizzle-kit generate && drizzle-kit migrate -- --dev",
+		"db:migrate:prod": "drizzle-kit generate && drizzle-kit migrate -- --prod"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-cloudflare": "4.7.0",
 		"@sveltejs/kit": "2.5.18",
 		"@sveltejs/vite-plugin-svelte": "3.1.1",
 		"@types/node": "20.14.12",
+		"better-sqlite3": "11.1.2",
 		"dotenv": "16.4.5",
 		"drizzle-kit": "0.23.0",
 		"prettier": "3.3.3",

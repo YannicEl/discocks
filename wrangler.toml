@@ -15,6 +15,12 @@ PNPM_VERSION = "9"
 
 [[env.preview.d1_databases]]
 binding = "DB"
-database_name = "discocks"
-database_id = "b6f47314-0051-48f1-8b95-3640f0eb0569"
+database_name = "discocks-dev"
+database_id = "ed9345ed-80f4-4440-aac4-b6335bc779c2"
+migrations_dir = "./drizzle/migrations"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "discocks-prod"
+database_id = "0f11ac13-3502-4336-a206-52df0856d11d"
 migrations_dir = "./drizzle/migrations"
